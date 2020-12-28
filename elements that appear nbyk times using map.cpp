@@ -21,3 +21,13 @@ int main() {
      NbyKelement(a,n,k);
 	return 0;
 }
+ // using sotrting we can easily solve it in O(nLogn) + O(n)=O(nlogn) as sorting takes O(nlogn) time
+
+ void NbyKelement(int a[],int n,int k){
+ sort(a,a+n);
+ for(int i=0;i<n;i++){
+ 	if(a[i]==a[i+1] && a[i]>(n/k)){
+ 		cout<<a[i]<<"\n";
+ 	}
+ }
+ }
